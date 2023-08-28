@@ -22,6 +22,7 @@ export default component$(() => {
 				id={pokemonId.value}
 				isBack={isBack.value}
 				isVisible={isVisible.value}
+				clickeable
 			/>
 			<div class="mt-2">
 				<button
@@ -29,13 +30,13 @@ export default component$(() => {
 					class={`btn btn-primary mr-2 ${pokemonId.value === 1 && 'disabled'}`}
 					disabled={pokemonId.value === 1}
 				>
-					Anterior
+					{'<'} Previous
 				</button>
 				<button
 					onClick$={() => changePokemonId(1)}
 					class="btn btn-primary mr-2"
 				>
-					Siguiente
+					Next {'>'}
 				</button>
 				<button
 					onClick$={() => (isBack.value = !isBack.value)}
