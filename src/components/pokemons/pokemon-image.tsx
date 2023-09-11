@@ -3,7 +3,7 @@ import { $, component$, useSignal, useTask$ } from '@builder.io/qwik';
 import { useNavigate } from '@builder.io/qwik-city';
 
 interface Props {
-	id: number;
+	id: number | string;
 	size?: number;
 	isBack?: boolean;
 	isVisible?: boolean;
